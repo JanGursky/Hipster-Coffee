@@ -1,0 +1,14 @@
+$font-style: 'Roboto Condensed', sans-serif;
+
+@mixin menu-titles {
+    font-size: 48px;
+    color: #212529;
+    font-weight: 300;
+}
+@mixin menu-items {
+    font-size: 24px;
+    color: #212529;
+    font-weight: 300;
+}
+$header-background: #f8f9fa;
+$footer-background: #343a40;

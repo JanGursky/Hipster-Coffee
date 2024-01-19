@@ -1,0 +1,49 @@
+$font-style: 'Roboto Condensed', sans-serif;
+
+@mixin menu-titles {
+    font-size: 48px;
+    color: #212529;
+    font-weight: 300;
+}
+@mixin menu-items {
+    font-size: 24px;
+    color: #212529;
+    font-weight: 300;
+}
+$header-background: #f8f9fa;
+$footer-background: #343a40;
+.body {
+    font-family: $font-style;
+
+    
+}
+.header {
+    background-color:$header-background;
+   .header__container{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    margin: 0 auto;
+
+    
+   
+
+    img {
+        height:4rem;
+    }
+
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+                
+
+        a {
+            padding: 2rem
+        }
+    }
+
+}
+
+}
+
