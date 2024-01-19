@@ -1,4 +1,4 @@
-$font-style: 'Roboto Condensed', sans-serif;
+$font-style: "Roboto Condensed", sans-serif;
 
 @mixin menu-titles {
     font-size: 48px;
@@ -12,3 +12,77 @@ $font-style: 'Roboto Condensed', sans-serif;
 }
 $header-background: #f8f9fa;
 $footer-background: #343a40;
+
+// Header
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: $font-style;
+}
+.header {
+    background-color:$header-background;
+   .header__container{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1.2rem;
+    .header__navigation { 
+        display: flex;  
+        gap: 3rem;
+        a {
+            color: black;
+            text-decoration: none; 
+            opacity: 0.5;
+            &:hover {
+                cursor: pointer;
+                opacity: 0.9;
+            } 
+        }
+    }
+    img {
+        height:7rem;
+    }
+}
+}
+//  FOOTER      
+.footer {
+    background-color:$footer-background;
+    height: 18rem;
+    text-align: center;
+    font-weight: 300;
+    .footer-navigation {
+        display: flex;
+        justify-content: center;    
+        gap: 6rem;
+        padding-top: 4rem;
+        a {
+            color: #0099ff;
+            text-decoration: underline;
+            &:hover {
+                color: #ced4da;
+                text-decoration: none;
+            }
+        }
+    }
+    .footer-text {
+        padding-top: 7rem;
+        .footer-text-hipster {
+            color: #ced4da;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        p { 
+            color: #ced4da;
+            a {
+                color: #0099ff;
+            }
+        }
+    }
+}   
+
