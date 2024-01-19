@@ -1,88 +1,159 @@
 $font-style: "Roboto Condensed", sans-serif;
 
 @mixin menu-titles {
-    font-size: 48px;
-    color: #212529;
-    font-weight: 300;
+  font-size: 48px;
+  color: #212529;
+  font-weight: 300;
 }
 @mixin menu-items {
-    font-size: 24px;
-    color: #212529;
-    font-weight: 300;
+  font-size: 24px;
+  color: #212529;
+  font-weight: 300;
 }
 $header-background: #f8f9fa;
 $footer-background: #343a40;
 
 // Header
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
- 
+
 body {
-    font-family: $font-style;
+  font-family: $font-style;
 }
 .header {
-    background-color:$header-background;
-   .header__container{
+  background-color: $header-background;
+  .header__container {
     display: flex;
     justify-content: space-between;
     width: 80%;
     align-items: center;
     margin: 0 auto;
     padding: 1.2rem;
-    .header__navigation { 
-        display: flex;  
-        gap: 3rem;
-        a {
-            color: black;
-            text-decoration: none; 
-            opacity: 0.5;
-            &:hover {
-                cursor: pointer;
-                opacity: 0.9;
-            } 
+    .header__navigation {
+      display: flex;
+      gap: 3rem;
+      a {
+        color: black;
+        text-decoration: none;
+        opacity: 0.5;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.9;
         }
+      }
     }
     img {
-        height:7rem;
+      height: 7rem;
     }
+  }
 }
-}
-//  FOOTER      
-.footer {
-    background-color:$footer-background;
-    height: 18rem;
-    text-align: center;
-    font-weight: 300;
-    .footer-navigation {
-        display: flex;
-        justify-content: center;    
-        gap: 6rem;
-        padding-top: 4rem;
-        a {
-            color: #0099ff;
-            text-decoration: underline;
-            &:hover {
-                color: #ced4da;
-                text-decoration: none;
-            }
-        }
-    }
-    .footer-text {
-        padding-top: 7rem;
-        .footer-text-hipster {
-            color: #ced4da;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-        p { 
-            color: #ced4da;
-            a {
-                color: #0099ff;
-            }
-        }
-    }
-}   
 
+// MAIN
+.main {
+  width: 80%;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  h1 {
+    @include menu-titles;
+    text-transform: uppercase;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-weight: 200;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .main-story {
+    display: flex;
+    justify-content: space-between;
+    p {
+      font-weight: 200;
+      width: 47%;
+    }
+  }
+  .main-owners {
+    display: flex;
+    gap: 4rem;
+    margin: 0 auto;
+    width: 50%;
+    .main-photos {
+      .eli {
+        height: 250px;
+        width: auto;
+      }
+      .robert {
+        height: 250px;
+        width: auto;
+      }
+    }
+  }
+  form {
+    text-align: center;
+    textarea {
+        width: 70%;
+        opacity: 0.9;
+    }
+    h2 {
+        text-align: center;
+        @include menu-titles;
+        margin-top: 3rem;
+    }
+    input {
+        border: none;
+        width: 33%;
+        padding: 1rem;
+        border-bottom: 2px solid #212529;
+        margin: 1rem;
+    }
+    .submit-btn {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        text-decoration: none;
+        background-color: white;
+        border: 3px solid #212529;
+        cursor: pointer;
+    }
+  }
+}
+
+//  FOOTER
+.footer {
+  background-color: $footer-background;
+  height: 18rem;
+  text-align: center;
+  font-weight: 300;
+  .footer-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    padding-top: 4rem;
+    a {
+      color: #0099ff;
+      text-decoration: underline;
+      &:hover {
+        color: #ced4da;
+        text-decoration: none;
+      }
+    }
+  }
+  .footer-text {
+    padding-top: 7rem;
+    .footer-text-hipster {
+      color: #ced4da;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    p {
+      color: #ced4da;
+      a {
+        color: #0099ff;
+      }
+    }
+  }
+}
