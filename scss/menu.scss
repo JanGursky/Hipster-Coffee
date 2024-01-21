@@ -5,13 +5,25 @@ $font-style: "Roboto Condensed", sans-serif;
     color: #212529;
     font-weight: 300;
 }
+
 @mixin menu-items {
     font-size: 24px;
     color: #212529;
     font-weight: 300;
 }
+
 $header-background: #f8f9fa;
 $footer-background: #343a40;
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
 
 // Header
 * {
@@ -19,70 +31,116 @@ $footer-background: #343a40;
     padding: 0;
     box-sizing: border-box;
 }
- 
+
 body {
     font-family: $font-style;
 }
+
 .header {
-    background-color:$header-background;
-   .header__container{
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    align-items: center;
-    margin: 0 auto;
-    padding: 1.2rem;
-    .header__navigation { 
-        display: flex;  
-        gap: 3rem;
-        a {
-            color: black;
-            text-decoration: none; 
-            opacity: 0.5;
-            &:hover {
-                cursor: pointer;
-                opacity: 0.9;
-            } 
+    background-color: $header-background;
+
+    .header__container {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        align-items: center;
+        margin: 0 auto;
+        padding: 1.2rem;
+
+        .header__navigation {
+            display: flex;
+            gap: 3rem;
+
+            a {
+                color: black;
+                text-decoration: none;
+                opacity: 0.5;
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.9;
+                }
+            }
+        }
+
+        img {
+            height: 7rem;
         }
     }
-    img {
-        height:7rem;
-    }
 }
+
+main {
+    width: 80%;
+    padding: 5rem;
 }
+
+.main__container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+.food__item {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 3rem;
+}
+
+.menu__image {
+    width: 70%;
+    margin: auto;
+}
+
+
+
 //  FOOTER      
 .footer {
-    background-color:$footer-background;
+    background-color: $footer-background;
     height: 18rem;
     text-align: center;
     font-weight: 300;
+
     .footer-navigation {
         display: flex;
-        justify-content: center;    
+        justify-content: center;
         gap: 6rem;
         padding-top: 4rem;
+
         a {
             color: #0099ff;
             text-decoration: underline;
+
             &:hover {
                 color: #ced4da;
                 text-decoration: none;
             }
         }
     }
+
     .footer-text {
         padding-top: 7rem;
+
         .footer-text-hipster {
             color: #ced4da;
             margin-bottom: 1rem;
             font-weight: 700;
         }
-        p { 
+
+        p {
             color: #ced4da;
+
             a {
                 color: #0099ff;
             }
         }
     }
-}   
-
+}
